@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: "http://localhost:3002/",
+  apiAuth: "http://localhost:3001/",
+  apiBalta: "https://balta-eshop.azurewebsites.net/"
+
 };
 
 /*

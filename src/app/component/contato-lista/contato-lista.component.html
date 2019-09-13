@@ -1,0 +1,21 @@
+<ion-list>
+  <ion-item *ngFor="let contato of contatos">
+    <ion-avatar slot="start">
+      <img src="{{contato.image}}">
+    </ion-avatar>
+    <ion-label>
+      <small><strong>{{ contato.nome }}</strong></small> <br>
+
+      {{contato.email }}|
+      {{contato.CPF }}
+      <small>
+        {{contato.telefone }} |
+        {{contato.endereco }}
+      </small>
+      <ion-item routerLink="/contatos-details/{{ contato.id }}">
+        <ion-icon name="more" slot="start"></ion-icon>
+        <ion-label>Detalhes</ion-label>
+      </ion-item>
+    </ion-label>
+  </ion-item>
+</ion-list>

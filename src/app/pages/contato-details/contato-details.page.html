@@ -1,0 +1,15 @@
+<ion-content *ngIf="contato" class="ion-padding">
+  <h1>
+    {{ contato.nome }} <br>
+    <small>{{ contato.email }}</small>
+  </h1>
+  <h1>{{ contato.cpf }}</h1>
+  <hr>
+  <img src="{{ contato.image }}">
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="editarContato()" color="danger">
+      <ion-icon name="cart"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
