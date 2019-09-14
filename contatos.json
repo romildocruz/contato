@@ -1,0 +1,438 @@
+{
+    "id": "mockoon_export",
+    "appVersion": "1.4.0",
+    "checksum": "70d37b6b975aea648e428f2c31166941",
+    "subject": "full",
+    "data": [
+        {
+            "uuid": "143e90a0-cf62-11e9-9f54-f7e85810594d",
+            "name": "Example",
+            "endpointPrefix": "",
+            "latency": 0,
+            "port": 3000,
+            "routes": [
+                {
+                    "uuid": "143eb7b0-cf62-11e9-9f54-f7e85810594d",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "address/13400000",
+                    "body": "[{\n\"street\": \"Rua dos Devs\",\n\"number\": \"256,\n\"neighborhood\": \"Bairro do Devs\",\n\"city\": \"Piracicaba\",\n\"state\": \"SP\",\n\"country\": \"BRA\"\n},\n{\n\"street\": \"Rua dos Ops\",\n\"number\": \"256,\n\"neighborhood\": \"Bairro do Ops\",\n\"city\": \"Sanca\",\n\"state\": \"SP\",\n\"country\": \"BRA\"\n}\n]",
+                    "latency": 1500,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "text/plain"
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "143eb7b1-cf62-11e9-9f54-f7e85810594d",
+                    "documentation": "",
+                    "method": "post",
+                    "endpoint": "dolphins",
+                    "body": "{\n    \"response\": \"So Long, and Thanks for All the Fish\"\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                }
+            ],
+            "proxyMode": false,
+            "proxyHost": "",
+            "https": false,
+            "cors": true,
+            "headers": [
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                },
+                {
+                    "key": "Access-Control-Allow-Methods",
+                    "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                },
+                {
+                    "key": "Access-Control-Allow-Headers",
+                    "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                },
+                {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "uuid": "ae633330-d03d-11e9-b22c-55c896cef7a7",
+            "name": "five",
+            "endpointPrefix": "",
+            "latency": 0,
+            "port": 3001,
+            "routes": [
+                {
+                    "uuid": "ae633331-d03d-11e9-b22c-55c896cef7a7",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "address/13400000",
+                    "body": "{\n    \"street\": \"Rua dos Devs\",\n    \"number\":\"256\",\n    \"neighborhood\":\"Bairro do Devs\",\n    \"city\":\"Piracicaba\",\n    \"state\":\"SP\",\n    \"country\":\"BRA\"\n}",
+                    "latency": 1500,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "ae633332-d03d-11e9-b22c-55c896cef7a7",
+                    "documentation": "customers",
+                    "method": "post",
+                    "endpoint": "produtos",
+                    "body": "{\n    \"message\": \"Produto cadastrado com sucesso!\",\n    \"success\":true,\n    \"data\": {\n        \"id\": \"0b09b24d-bc8c-400e-8e10-61aa93cd715d\"\n    }\n}",
+                    "latency": 1600,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "ae633333-d03d-11e9-b22c-55c896cef7a7",
+                    "documentation": "customers",
+                    "method": "put",
+                    "endpoint": "produtos/0b09b24d-bc8c-400e-8e10-61aa93cd715d",
+                    "body": "{\n    \"message\": \"Produto alterado com sucesso!\",\n    \"success\":true,\n    \"data\": {\n        \"id\": \"0b09b24d-bc8c-400e-8e10-61aa93cd715d\"\n    }\n}",
+                    "latency": 1000,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "ae633334-d03d-11e9-b22c-55c896cef7a7",
+                    "documentation": "customers",
+                    "method": "delete",
+                    "endpoint": "produtos/0b09b24d-bc8c-400e-8e10-61aa93cd715d",
+                    "body": "{\n    \"message\": \"Produto excluido com sucesso!\",\n    \"success\":true,\n    \"data\": null\n}",
+                    "latency": 800,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "ae633335-d03d-11e9-b22c-55c896cef7a7",
+                    "documentation": "customers",
+                    "method": "get",
+                    "endpoint": "produtos",
+                    "body": "[\n{\n    \"id\":\"0b09b24d-bc8c-400e-8e10-61aa93cd715d\",\n    \"titulo\":\"Mouse \",\n    \"preco\":\"38\",\n    \"descricao\": \"Mouse desenvolvido\",\n    \"qtde\": \"22\",\n    \"categoria\": \"10\"\n    \n},\n{\n    \"id\":\"0b09b99d-bc8c-55e-8e10-61aa93cd725d\",\n    \"titulo\":\"Teclado \",\n    \"preco\":\"100\",\n    \"descricao\": \"Teclado desenvolvido\",\n    \"qtde\": \"5\",\n    \"categoria\": \"12\"\n}\n]",
+                    "latency": 1000,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "b7bf5500-d27f-11e9-8802-5b5e7e6787c7",
+                    "documentation": "",
+                    "method": "post",
+                    "endpoint": "accounts/authenticate",
+                    "body": "{\r\n   \"user\":\"romildo\",\r\n   \"name\":\"RBCJ\",\r\n   \"email\":\"romildobcj@gmail.com\",\r\n   \"image\":\"minha imagem\",\r\n   \"roles\":[\"administrador\", \"manager\"],\r\n   \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\"\r\n}",
+                    "latency": 1000,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                }
+            ],
+            "proxyMode": false,
+            "proxyHost": "",
+            "https": false,
+            "cors": true,
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                },
+                {
+                    "key": "Access-Control-Allow-Headers",
+                    "value": "Origin, X-Requested-With, Content-Type, Accept"
+                },
+                {
+                    "key": "Access-Control-Allow-Methods",
+                    "value": "GET, POST, PUT, DELETE, OPTIONS"
+                }
+            ]
+        },
+        {
+            "uuid": "d861b890-d1a6-11e9-a145-13aecfcc0ded",
+            "name": "five",
+            "endpointPrefix": "",
+            "latency": 0,
+            "port": 3001,
+            "routes": [
+                {
+                    "uuid": "d861b891-d1a6-11e9-a145-13aecfcc0ded",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "address/13400000",
+                    "body": "{\n    \"street\": \"Rua dos Devs\",\n    \"number\":\"256\",\n    \"neighborhood\":\"Bairro do Devs\",\n    \"city\":\"Piracicaba\",\n    \"state\":\"SP\",\n    \"country\":\"BRA\"\n}",
+                    "latency": 1500,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "d861b892-d1a6-11e9-a145-13aecfcc0ded",
+                    "documentation": "customers",
+                    "method": "post",
+                    "endpoint": "customers",
+                    "body": "{\n    \"message\": \"Cliente cadastrado com sucesso!\",\n    \"success\":true,\n    \"data\": {\n        \"id\": \"0b09b24d-bc8c-400e-8e10-61aa93cd715d\"\n    }\n}",
+                    "latency": 1600,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "d861b893-d1a6-11e9-a145-13aecfcc0ded",
+                    "documentation": "customers",
+                    "method": "put",
+                    "endpoint": "customers/0b09b24d-bc8c-400e-8e10-61aa93cd715d",
+                    "body": "{\n    \"message\": \"Cliente alteradp com sucesso!\",\n    \"success\":true,\n    \"data\": {\n        \"id\": \"0b09b24d-bc8c-400e-8e10-61aa93cd715d\"\n    }\n}",
+                    "latency": 1000,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "d861b894-d1a6-11e9-a145-13aecfcc0ded",
+                    "documentation": "customers",
+                    "method": "delete",
+                    "endpoint": "customers/0b09b24d-bc8c-400e-8e10-61aa93cd715d",
+                    "body": "{\n    \"message\": \"Cliente excluido com sucesso!\",\n    \"success\":true,\n    \"data\": null\n}",
+                    "latency": 800,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "d861b895-d1a6-11e9-a145-13aecfcc0ded",
+                    "documentation": "customers",
+                    "method": "get",
+                    "endpoint": "customers",
+                    "body": "[\n{\"id\":\"0b09b24d-bc8c-400e-8e10-61aa93cd715d\",\"name\":\"Bruce Wayne\",\"email\":\"batman@balta.io\"},\n{\"id\":\"0b09b24d-bc8c-400e-8e10-61aa93cd715e\",\"name\":\"Peter Parker\",\"email\":\"spiderman@balta.io\"},\n{\"id\":\"0b09b24d-bc8c-400e-8e10-61aa93cd715f\",\"name\":\"Tony Stark\",\"email\":\"ironman@balta.io\"}\n]",
+                    "latency": 1000,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                }
+            ],
+            "proxyMode": false,
+            "proxyHost": "",
+            "https": false,
+            "cors": true,
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                },
+                {
+                    "key": "Access-Control-Allow-Headers",
+                    "value": "Origin, X-Requested-With, Content-Type, Accept"
+                },
+                {
+                    "key": "Access-Control-Allow-Methods",
+                    "value": "GET, POST, PUT, DELETE, OPTIONS"
+                }
+            ]
+        },
+        {
+            "uuid": "873a4800-d5a3-11e9-a114-e587ef9afc4c",
+            "name": "contato",
+            "endpointPrefix": "",
+            "latency": 0,
+            "port": 3002,
+            "routes": [
+                {
+                    "uuid": "",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "contato",
+                    "body": "[\n {\n    \"id\": 1,\n    \"nome\": \"Adalto Pereira\",\n    \"email\": \"ada@per.com\",\n    \"CPF\": \"14785236974\",\n    \"telefone\":\"169987465321\",\n    \"endereco\":\"Rua 9 de julho 1080\",\n    \"image\":\"http://lorempixel.com/400/200/\"\n },\n   {\n    \"id\": 2,\n    \"nome\": \"Jurandir Silverio\",\n    \"email\": \"jura@sil.com\",\n    \"CPF\": \"21785236974\",\n    \"telefone\":\"139987458521\",\n    \"endereco\":\"Rua Brasil dos Altos, 1024\",\n    \"image\":\"http://lorempixel.com/400/200/\"\n}\n]\n",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "8a692ee0-d5a5-11e9-a114-e587ef9afc4c",
+                    "documentation": "",
+                    "method": "post",
+                    "endpoint": "contato",
+                    "body": "{\n    \"message\": \"Contato cadastrado com sucesso!\",\n    \"success\":true,\n    \"data\": {\n        \"id\": \"0b09b24d-bc8c-400e-8e10-61aa93cd715d\"\n    }\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "b21e4880-d5a5-11e9-a114-e587ef9afc4c",
+                    "documentation": "",
+                    "method": "put",
+                    "endpoint": "contato/1",
+                    "body": "{\n    \"message\": \"Contato alterado com sucesso!\",\n    \"success\":true,\n    \"data\": {\n        \"id\": \"a6af58ad-08d7-4246-bbc9-598c291cbc0b\"\n    }\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "eccfc3f0-d5a5-11e9-a114-e587ef9afc4c",
+                    "documentation": "",
+                    "method": "delete",
+                    "endpoint": "contato/1",
+                    "body": "{\n    \"message\": \"Contato excluido com sucesso!\",\n    \"success\":true,\n    \"data\": null\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "277fb150-d66d-11e9-a3c2-c31c6799cb38",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "contato/1",
+                    "body": "{\n    \"id\": 1,\n    \"nome\": \"Adalto Pereira\",\n    \"email\": \"ada@per.com\",\n    \"CPF\": \"14785236974\",\n    \"telefone\":\"169987465321\",\n    \"endereco\":\"Rua 9 de julho 1080\",\n    \"image\":\"http://lorempixel.com/400/200/\"\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                }
+            ],
+            "proxyMode": false,
+            "proxyHost": "",
+            "https": false,
+            "cors": true,
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                },
+                {
+                    "key": "Access-Control-Allow-Methods",
+                    "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                },
+                {
+                    "key": "Access-Control-Allow-Headers",
+                    "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                }
+            ]
+        }
+    ]
+}
