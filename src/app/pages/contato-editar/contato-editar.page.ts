@@ -4,6 +4,7 @@ import { LoadingController, ToastController, AlertController, NavController } fr
 import { DataService } from 'src/app/data.service';
 import { ActivatedRoute } from '@angular/router';
 import { Contato } from 'src/models/contato.model';
+import { contatoUtil } from 'src/Utils/contato.util';
 
 @Component({
   selector: 'app-contato-editar',
@@ -12,6 +13,7 @@ import { Contato } from 'src/models/contato.model';
 })
 export class ContatoEditarPage implements OnInit {
   @Input() contato: Contato = new Contato();
+  public contatos: Contato[];
   public form: FormGroup;
 
   constructor(
@@ -39,21 +41,13 @@ export class ContatoEditarPage implements OnInit {
 
     this
       .service
-      .getContato(id)
+      .getContato(parseInt(id))
       .subscribe(
         (res: any) => this.contato = res
       );
   }
-  ngOnChanges(chances: SimpleChange) {
-    this.form.controls['id'].setValue(this.contato.id);
-    this.form.controls['nome'].setValue(this.contato.nome);
-    this.form.controls['email'].setValue(this.contato.email);
-    this.form.controls['CPF'].setValue(this.contato.CPF);
-    this.form.controls['telefone'].setValue(this.contato.telefone);
-    this.form.controls['endereco'].setValue(this.contato.endereco);
-  }
   async submit() {
-    const loading = await this.loadingCtrl.create({ message: 'Criando...' });
+    const loading = await this.loadingCtrl.create({ message: 'Alterando...' });
     loading.present();
 
     this
@@ -62,7 +56,7 @@ export class ContatoEditarPage implements OnInit {
       .subscribe(
         (res: any) => {
           loading.dismiss();
-          this.showSuccess();
+          this.showSuccess('Contato. Alterado com Sucesso');
         },
         (err: any) => {
           loading.dismiss();
@@ -71,7 +65,25 @@ export class ContatoEditarPage implements OnInit {
         }
       );
   }
+  async contatoExcluir() {
+    const loading = await this.loadingCtrl.create({ message: 'Excluindo...' });
+    loading.present();
 
+    this
+      .service
+      .delete(this.form.value)
+      .subscribe(
+        (res: any) => {
+          loading.dismiss();
+          this.showSuccess('Contato. Excluido com Sucesso');
+        },
+        (err: any) => {
+          loading.dismiss();
+          console.log(err);
+          this.showError("Falha ao excluir");
+        }
+      );
+  }
   async showError(message: string) {
     const toast = await this.toastCtrl.create({
       message: message,
@@ -82,9 +94,9 @@ export class ContatoEditarPage implements OnInit {
     toast.present();
   }
 
-  async showSuccess() {
+  async showSuccess(msg: string) {
     const alert = await this.alertCtrl.create({
-      message: 'Contato. Alterado com Sucesso',
+      message: msg,
       buttons: [{
         text: 'Continuar',
         handler: () => {

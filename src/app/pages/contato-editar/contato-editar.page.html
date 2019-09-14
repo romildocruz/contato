@@ -45,7 +45,12 @@
             Salvar
           </ion-button>
           <br>
-          <ion-button routerLink="/login" color="medium" fill="clear" size="small" expand="full">
+          <ion-button color="danger" shape="round" fill="outline" size="large" expand="full" [disabled]="form.invalid"
+            (click)="contatoExcluir()">
+            Excluir
+          </ion-button>
+          <br>
+          <ion-button routerLink="/login" color="medium" shape="round" fill="outline" size="large" expand="full">
             Cancelar
           </ion-button>
         </p>

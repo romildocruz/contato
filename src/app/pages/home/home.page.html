@@ -1,4 +1,10 @@
 <ion-list>
+  <ion-button color="dark" size="small" (click)="contatoDetalhe()">Novo Contato
+  </ion-button>
+  <ion-button color="dark" ion-item routerLink="/contato-editar/{{ 0 }}">
+    <ion-icon name="more" slot="start"></ion-icon>
+    <ion-label>Novo Contato</ion-label>
+  </ion-button>
   <ion-item *ngFor="let contato of contatos">
     <ion-avatar slot="start">
       <img src="{{contato.image}}">
@@ -14,16 +20,10 @@
         {{contato.endereco }}
       </small>
 
-      <ion-button color="primary" size="small" (click)="contatoDetalhe()">Detalhe</ion-button>
-
       <ion-button ion-item routerLink="/contato-editar/{{ contato.id }}">
         <ion-icon name="more" slot="start"></ion-icon>
         <ion-label>Editar</ion-label>
       </ion-button>
-      <!-- <ion-button color="secondary" size="small" (click)="contatoEditar()">Editar</ion-button> -->
-
-
-      <ion-button color="danger" size="small" (click)="contatoExcluir()">Excluir</ion-button>
     </ion-label>
   </ion-item>
 </ion-list>
