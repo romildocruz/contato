@@ -29,11 +29,31 @@
                 </ion-item>
                 <ion-item>
                   <ion-label position="floating">Telefone</ion-label>
-                  <ion-input type="test" formControlName="telefone"></ion-input>
+                  <ion-input type="text" formControlName="telefone"></ion-input>
                 </ion-item>
                 <ion-item>
-                  <ion-label position="floating">Endereço</ion-label>
-                  <ion-input type="test" formControlName="endereco"></ion-input>
+                  <ion-label position="floating">CEP</ion-label>
+                  <ion-input type="text" (blur)="buscaCEP(form.cep)" formControlName="cep"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Logradouro</ion-label>
+                  <ion-input type="text" formControlName="logradouro"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Complemento</ion-label>
+                  <ion-input type="text" formControlName="complemento"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Bairro</ion-label>
+                  <ion-input type="text" formControlName="bairro"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Localidade</ion-label>
+                  <ion-input type="text" formControlName="bairro"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">UF</ion-label>
+                  <ion-input type="text" formControlName="uf"></ion-input>
                 </ion-item>
               </ion-list>
             </form>

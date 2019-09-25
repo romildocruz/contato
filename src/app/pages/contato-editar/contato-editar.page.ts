@@ -27,12 +27,18 @@ export class ContatoEditarPage implements OnInit {
 
   ) {
     this.form = this.fb.group({
-      id: [this.contato.id],
-      nome: [this.contato.nome, Validators.minLength(5)],
-      email: [this.contato.email, Validators.minLength(10)],
-      CPF: [this.contato.CPF, Validators.minLength(11)],
-      telefone: [this.contato.telefone, Validators.minLength(8)],
-      endereco: [this.contato.endereco, Validators.minLength(10)],
+      id: [''],
+      nome: ['', Validators.minLength(5)],
+      email: ['', Validators.minLength(10)],
+      CPF: ['', Validators.minLength(11)],
+      telefone: ['', Validators.minLength(8)],
+      endereco: ['', Validators.minLength(10)],
+       cep: ['', Validators.minLength(8)],
+       logradouro: ['', Validators.minLength(60)],
+       complemento: ['', Validators.minLength(45)],
+       bairro: ['', Validators.minLength(60)],
+       localidade: ['', Validators.minLength(60)],
+       uf: ['', Validators.minLength(2)],
     });
   }
 
@@ -41,7 +47,7 @@ export class ContatoEditarPage implements OnInit {
 
     this
       .service
-      .getContato(parseInt(id))
+      .getContato(id)
       .subscribe(
         (res: any) => this.contato = res
       );

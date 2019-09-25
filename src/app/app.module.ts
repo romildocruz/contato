@@ -8,14 +8,27 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuPage } from './pages/menu/menu.page';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
-  declarations: [AppComponent, MenuPage],
+  declarations: [
+    AppComponent, 
+    MenuPage],
   entryComponents: [],
-  imports: [BrowserModule, HttpClientModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule,
+     HttpClientModule, 
+     IonicModule.forRoot(),
+      AppRoutingModule
+    ],
   providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    AuthGuard,
+    { provide: RouteReuseStrategy, 
+      useClass: IonicRouteStrategy 
+    }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

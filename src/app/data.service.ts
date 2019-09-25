@@ -14,6 +14,10 @@ export class DataService {
 
   ) { }
 
+  findCep(cep: string){
+    return this.http.get(`https://viacep.com.br/ws/${cep}/json/`);
+  }
+  
   createAccount(data: any) {
     return this.http.post(`${environment.apiBalta}v1/account`, data);
   }
@@ -34,7 +38,7 @@ export class DataService {
     return this.http.get(`${environment.apiUrl}/contato`);
   }
 
-  getContato(id: number) {
+  getContato(id: string) {
     return this.http.get(`${environment.apiUrl}/contato/${id}`);
   }
 
